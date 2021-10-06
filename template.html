@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <style>
+        :root {
+            --blue: #12345A;
+            --black: #000000;
+            --grey: #666666;
+            --white: #FFFFFF;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+
+            padding: 0;
+            margin: 0;
+
+            display: grid;
+            grid-template:
+                "header"17vh "main"1fr "footer"auto / 100vw;
+        }
+
+        header {
+            grid-area: header;
+            background-color: red;
+        }
+
+        button {
+            width: 10vw;
+            height: 10vh;
+        }
+
+        aside {
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            width: 50vw;
+            height: 100vh;
+
+            background-color: orange;
+            display: none;
+        }
+
+        aside.visible {
+            display: block;
+        }
+
+        main {
+            grid-area: main;
+            background-color: yellow;
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: green;
+        }
+    </style>
+    <script type="module">
+        const sidebar = document.querySelector('aside');
+        const openButton = document.querySelector('#open-sidebar');
+        const closeButton = document.querySelector('#close-sidebar');
+
+        openButton.addEventListener('click', () => sidebar.classList.add('visible'));
+        closeButton.addEventListener('click', () => sidebar.classList.remove('visible'));
+
+        document.addEventListener('click', (event) => {
+            const isSidebarClick = event.composedPath().includes(sidebar);
+            const isOpenButtonClick = event.composedPath().includes(openButton);
+
+            if (!isSidebarClick && !isOpenButtonClick) {
+                sidebar.classList.remove('visible');
+            }
+        });
+    </script>
+</head>
+
+<body>
+    <header>
+        <button id="open-sidebar"></button>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam laborum quibusdam harum quis iste
+        blanditiis voluptatibus tenetur dignissimos perferendis nemo! Debitis nihil molestias sunt similique numquam
+        ducimus repellendus deserunt a!
+    </header>
+    <aside>
+        <button id="close-sidebar"></button>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, nam laborum eveniet velit repellendus quae
+        similique dolores recusandae? Officiis pariatur odit ipsa architecto nesciunt repudiandae ea accusamus
+        molestias eaque illum.
+    </aside>
+    <main>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, nam laborum eveniet velit repellendus quae
+        similique dolores recusandae? Officiis pariatur odit ipsa architecto nesciunt repudiandae ea accusamus
+        molestias eaque illum.
+    </main>
+    <footer>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Id, nam laborum eveniet velit repellendus quae
+        similique dolores recusandae? Officiis pariatur odit ipsa architecto nesciunt repudiandae ea accusamus
+        molestias eaque illum.
+    </footer>
+
+</body>
+
+</html>
