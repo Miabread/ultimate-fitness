@@ -98,10 +98,14 @@ button {
         width: auto;
         height: auto;
 
-        animation: none;
         transform: none;
 
         grid-area: aside;
+    }
+
+    #template-sidebar.slide-in,
+    #template-sidebar.slide-out {
+        animation: none;
     }
 
     button {
