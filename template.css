@@ -92,6 +92,9 @@ button {
         width: auto;
         height: auto;
 
+        animation: none;
+        transform: none;
+
         grid-area: aside;
     }
 
