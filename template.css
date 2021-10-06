@@ -43,6 +43,12 @@ aside {
     display: none;
 }
 
+#template-sidebar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
 aside.visible {
     display: block;
 }
