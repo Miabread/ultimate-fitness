@@ -17,14 +17,14 @@
         body {
             width: 100vw;
             height: 100vh;
-            overflow: hidden;
+            /* overflow: hidden; */
 
             padding: 0;
             margin: 0;
 
             display: grid;
             grid-template:
-                "header"17vh "main"1fr "footer"auto / 100vw;
+                "header"minmax(17vh, auto) "main"1fr "footer"auto / 100vw;
         }
 
         header {
@@ -61,6 +61,26 @@
         footer {
             grid-area: footer;
             background-color: green;
+        }
+
+        @media only screen and (min-width: 768px) {
+            body {
+                grid-template:
+                    "header header"17vh "aside main"1fr "aside footer"auto / 15vw 1fr;
+            }
+
+            aside {
+                position: static;
+                width: auto;
+                height: auto;
+
+                display: block;
+                grid-area: aside;
+            }
+
+            button {
+                display: none;
+            }
         }
     </style>
     <script type="module">
