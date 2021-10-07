@@ -119,14 +119,10 @@ button {
 @media only screen and (min-width: 768px) {
     body {
         grid-template:
-            "header header" minmax(auto, 17vh)
+            "header header" auto
             "aside  main  " 1fr
             "footer footer" auto
             / minmax(10vw, auto) 1fr;
-    }
-
-    #template-header img {
-        width: auto;
     }
 
     #template-sidebar {
