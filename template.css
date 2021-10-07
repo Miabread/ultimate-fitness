@@ -1,14 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
 :root {
     --blue: #12345a;
+    --blue-bright: #5796dd;
     --black: #000000;
     --grey: #666666;
     --white: #ffffff;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
+    font-family: "Roboto", sans-serif;
+
     width: 100vw;
     height: 100vh;
-    /* overflow: hidden; */
+    overflow-x: hidden;
 
     padding: 0;
     margin: 0;
@@ -37,6 +47,7 @@ button {
     left: 0;
 
     --sidebar-width: 50vw;
+    --slide-duration: 0.5s;
 
     width: var(--sidebar-width);
     height: 100vh;
@@ -46,7 +57,7 @@ button {
 }
 
 #template-sidebar.slide-in {
-    animation: slide-in 0.5s forwards;
+    animation: slide-in var(--slide-duration) forwards;
 }
 
 @keyframes slide-in {
@@ -56,7 +67,7 @@ button {
 }
 
 #template-sidebar.slide-out {
-    animation: slide-out 0.5s forwards;
+    animation: slide-out var(--slide-duration) forwards;
 }
 
 @keyframes slide-out {
@@ -70,8 +81,22 @@ button {
 
 #template-sidebar ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
+}
+
+#template-sidebar a {
+    height: 3em;
+    width: 100%;
+
+    display: grid;
+    place-content: center;
+
+    color: white;
+    text-decoration: none;
 }
 
 #template-main {
@@ -90,7 +115,7 @@ button {
             "header header" 17vh
             "aside  main  " 1fr
             "footer footer" auto
-            / 15vw 1fr;
+            / minmax(10vw, auto) 1fr;
     }
 
     #template-sidebar {
@@ -106,6 +131,10 @@ button {
     #template-sidebar.slide-in,
     #template-sidebar.slide-out {
         animation: none;
+    }
+
+    #template-sidebar a:hover {
+        background-color: var(--blue-bright);
     }
 
     button {
