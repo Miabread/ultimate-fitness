@@ -38,11 +38,13 @@
 
     <body>
         <header id="template-header">
-            <img
-                id="open-sidebar"
-                src="images/FITNESS_supperBetter.png"
-                alt="Ultimate Fitness"
-            />
+            <picture id="open-sidebar" alt="Ultimate Fitness">
+                <source
+                    media="(min-width: 768px)"
+                    srcset="images/FITNESS_superBetterLonglong.png"
+                />
+                <img src="images/FITNESS_supperBetter.png" />
+            </picture>
         </header>
 
         <aside id="template-sidebar">
