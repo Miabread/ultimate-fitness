@@ -118,7 +118,7 @@ button {
     padding: 1em;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 @media only screen and (min-width: 768px) {
