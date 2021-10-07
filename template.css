@@ -25,7 +25,7 @@ body {
 
     display: grid;
     grid-template:
-        "header" minmax(17vh, auto)
+        "header" auto
         "main" 1fr
         "footer" auto
         / 100vw;
@@ -34,10 +34,17 @@ body {
 #template-header {
     grid-area: header;
     background-color: var(--blue);
+
+    display: flex;
+    justify-content: center;
+}
+
+#template-header img {
+    width: 100%;
 }
 
 button {
-    width: 10vw;
+    width: 100%;
     height: 10vh;
 }
 
@@ -112,10 +119,14 @@ button {
 @media only screen and (min-width: 768px) {
     body {
         grid-template:
-            "header header" 17vh
+            "header header" minmax(auto, 17vh)
             "aside  main  " 1fr
             "footer footer" auto
             / minmax(10vw, auto) 1fr;
+    }
+
+    #template-header img {
+        width: auto;
     }
 
     #template-sidebar {
