@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 
 :root {
     --blue: #12345a;
@@ -104,6 +105,14 @@ button {
 
     color: white;
     text-decoration: none;
+
+    padding-top: 1em;
+    padding-bottom: 1em;
+    padding-right: 1em;
+
+    background: linear-gradient(var(--blue) 0%, var(--blue-bright) 100%);
+    font-size: 2em;
+    font-family: "Bebas Neue", cursive;
 }
 
 #template-main {
