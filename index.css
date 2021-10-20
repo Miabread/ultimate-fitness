@@ -1,0 +1,12 @@
+#align-right {
+    text-align: center;
+}
+@media only screen and (min-width: 768px) {
+    body {
+        grid-template:
+            "header header" auto
+            "aside  main  " 1fr
+            "footer footer" auto
+            / minmax(10vw, auto) 1fr;
+    }
+}
