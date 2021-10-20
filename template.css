@@ -115,6 +115,10 @@ button {
     font-family: "Bebas Neue", cursive;
 }
 
+#template-sidebar a:hover {
+    transform: translateX(20%);
+}
+
 #template-main {
     grid-area: main;
     background-color: var(--white);
