@@ -21,9 +21,6 @@ body {
     height: 100vh;
     overflow-x: hidden;
 
-    padding: 0;
-    margin: 0;
-
     display: grid;
     grid-template:
         "header" auto
@@ -40,7 +37,8 @@ body {
     justify-content: center;
 }
 
-#template-header img {
+#template-header img,
+#template-header picture {
     width: 100%;
 }
 
@@ -106,17 +104,9 @@ button {
     color: white;
     text-decoration: none;
 
-    padding-top: 1em;
-    padding-bottom: 1em;
-    padding-right: 1em;
-
     background: linear-gradient(var(--blue) 0%, var(--blue-bright) 100%);
     font-size: 2em;
     font-family: "Bebas Neue", cursive;
-}
-
-#template-sidebar a:hover {
-    transform: translateX(20%);
 }
 
 #template-main {
@@ -158,8 +148,16 @@ button {
         animation: none;
     }
 
+    #template-sidebar a {
+        padding-top: 1em;
+        padding-bottom: 1em;
+        padding-right: 1em;
+
+        transition: transform 0.1s;
+    }
+
     #template-sidebar a:hover {
-        background-color: var(--blue-bright);
+        transform: translateX(20%);
     }
 
     button {
