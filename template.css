@@ -21,9 +21,6 @@ body {
     height: 100vh;
     overflow-x: hidden;
 
-    padding: 0;
-    margin: 0;
-
     display: grid;
     grid-template:
         "header" auto
@@ -40,7 +37,8 @@ body {
     justify-content: center;
 }
 
-#template-header img {
+#template-header img,
+#template-header picture {
     width: 100%;
 }
 
