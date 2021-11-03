@@ -10,4 +10,7 @@ main img {
     main img {
         width: 27vw;
     }
+    main {
+        padding: 50px;
+    }
 }
