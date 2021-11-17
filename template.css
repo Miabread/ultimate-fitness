@@ -125,6 +125,10 @@ button {
     justify-content: center;
 }
 
+main {
+    padding: 2em;
+}
+
 @media only screen and (min-width: 768px) {
     body {
         grid-template:
@@ -163,5 +167,9 @@ button {
 
     button {
         display: none;
+    }
+
+    main {
+        padding: 10vw;
     }
 }
