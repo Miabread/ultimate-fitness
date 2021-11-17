@@ -1,22 +1,31 @@
-main {
-    padding: 2em;
-}
-
 main img {
     width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
-    main img {
-        width: 25vw;
-    }
-    .headers p {
-        font-size: 15px;
-    }
     main {
-        padding: 50px;
+        display: grid;
+        grid-template:
+            "headers list" auto
+            "img1 img2" auto
+            / 1fr 1fr;
+        gap: 4em;
     }
-    div ul {
-        margin: 20px;
+
+    .headers {
+        grid-area: headers;
+    }
+
+    .list {
+        grid-area: list;
+    }
+
+    img:nth-of-type(1) {
+        grid-area: img1;
+    }
+
+    img:nth-of-type(2) {
+        grid-area: img2;
+        width: 20vw;
     }
 }
