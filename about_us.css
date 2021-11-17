@@ -1,21 +1,21 @@
-main {
-    padding: 2em;
-}
-
 main img {
     width: 100%;
 }
 
 @media only screen and (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template: auto / 1fr 1fr;
+    }
+
     main img {
         width: 25vw;
     }
+
     .headers p {
         font-size: 15px;
     }
-    main {
-        padding: 50px;
-    }
+
     div ul {
         margin: 20px;
     }
