@@ -1,132 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="template.css" />
+        <title>
+            Ultimate Fitness: State-of-the-Art Health and Fitness Facilities
+        </title>
+        <link rel="stylesheet" href="template.css" />
+        <link rel="stylesheet" href="facilities.css" />
 
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="template.css" />
-    <title>
-        Ultimate Fitness: State-of-the-Art Health and Fitness Facilities
-    </title>
-    <link rel="stylesheet" href="template.css" />
-    <link rel="stylesheet" href="facilities.css" />
+        <script type="module">
+            const sidebar = document.querySelector("aside");
+            const openButton = document.querySelector("#open-sidebar");
+            const closeButton = document.querySelector("#close-sidebar");
 
-    <script type="module">
-        const sidebar = document.querySelector("aside");
-        const openButton = document.querySelector("#open-sidebar");
-        const closeButton = document.querySelector("#close-sidebar");
-
-        openButton.addEventListener("click", () => {
-            sidebar.classList.add("slide-in");
-            sidebar.classList.remove("slide-out");
-        });
-        closeButton.addEventListener("click", () => {
-            sidebar.classList.remove("slide-in");
-            sidebar.classList.add("slide-out");
-        });
-
-        document.addEventListener("click", (event) => {
-            const isSidebarClick = event.composedPath().includes(sidebar);
-            const isOpenButtonClick = event
-                .composedPath()
-                .includes(openButton);
-
-            if (!isSidebarClick && !isOpenButtonClick) {
+            openButton.addEventListener("click", () => {
+                sidebar.classList.add("slide-in");
+                sidebar.classList.remove("slide-out");
+            });
+            closeButton.addEventListener("click", () => {
                 sidebar.classList.remove("slide-in");
                 sidebar.classList.add("slide-out");
-            }
-        });
-    </script>
-</head>
+            });
 
-<body>
-    <header id="template-header">
-        <picture id="open-sidebar" alt="Ultimate Fitness">
-            <source media="(min-width: 768px)" srcset="images/FITNESS_superBetterLonglong.png" />
-            <img src="images/FITNESS_supperBetter.png" />
-        </picture>
-    </header>
+            document.addEventListener("click", (event) => {
+                const isSidebarClick = event.composedPath().includes(sidebar);
+                const isOpenButtonClick = event
+                    .composedPath()
+                    .includes(openButton);
 
-    <aside id="template-sidebar">
-        <button id="close-sidebar"></button>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="facilities.html">Facilities</a></li>
-                <li><a href="about_us.html">About Us</a></li>
-                <li><a href="membership_plans.html">Membership Plans</a></li>
-                <li><a href="Fitness_Tips_main.html">Fitness Tips</a></li>
-                <li><a href="">Class Schedule</a></li>
-                <li><a href="">Contact Us</a></li>
-                <li><a href="">Resources</a></li>
-            </ul>
-        </nav>
-    </aside>
+                if (!isSidebarClick && !isOpenButtonClick) {
+                    sidebar.classList.remove("slide-in");
+                    sidebar.classList.add("slide-out");
+                }
+            });
+        </script>
+    </head>
 
-    <main id="template-main">
-        <div class="headers">
-            <h2>Welcome to the Facilities Tour of Ultimate Fitness</h2>
-            <br />
-            <p>
-                The Ultimate Fitness state-of-the-art facility consists of
-                <br />
-                more than 20,000 square feet of health and fitness equipment
-                <br />
-                space. The facility features one free weight gym area,two
-                <br />
-                aerobics rooms, a cardio room, a sauna room and Jacuzzi
-                <br />
-                pool. We also have seperate men's and women's locker rooms
-                <br />
-                that contain lockers, changing rooms, and shower areas.
-                <br />
-            </p>
-        </div>
-        <img src="images/Bonus Facility Images/More_free_weights.jpg" />
-        <div class="list">
-            <p>
-                The Ultimate Fitness facility features the best in training,
-                <br />
-                fitness equipment, and accommodations including:
-                <br />
-                <br />
-            </p>
-            <ul>
-                <li>Aerobics</li>
-                <li>Circuit Training</li>
-                <li>Elliptical Trainers</li>
-                <li>Free Weights</li>
-                <li>Group Cycling(Spinning)</li>
-                <li>Kickboxing</li>
-                <li>Men's and Women's Locker Rooms</li>
-                <li>Multi-screen Video System</li>
-                <li>Personal Training</li>
-                <li>Pilates</li>
-                <li>Plate-loaded Machines</li>
-                <li>Snack/Juice Bar</li>
-                <li>Stair Climbers</li>
-                <li>Stationary Cycling</li>
-                <li>Step Aerobics</li>
-                <li>Treadmills</li>
-                <li>Yoga</li>
-            </ul>
-        </div>
-        <img src="images/Bonus Facility Images/Juice_bar.jpg" />
-    </main>
+    <body>
+        <header id="template-header">
+            <picture id="open-sidebar" alt="Ultimate Fitness">
+                <source
+                    media="(min-width: 768px)"
+                    srcset="images/FITNESS_superBetterLonglong.png"
+                />
+                <img src="images/FITNESS_supperBetter.png" />
+            </picture>
+        </header>
 
-    <footer id="template-footer">
-        <address>
-            350 Park Avenue, New York 10019 &nbsp;&#9679;&nbsp; Phone:
-            <a href="tel:18887574856"> 1.888.757.4856 </a>
-            &nbsp;&#9679;&nbsp; Fax:
-            <a href="fax:18887574987"> 1.888.757.4987 </a>
-            &nbsp;&#9679;&nbsp; E-mail:
-            <a href="mailto:contact@uf-online.com">
-                contact@uf-online.com
-            </a>
-        </address>
-    </footer>
-</body>
+        <aside id="template-sidebar">
+            <button id="close-sidebar"></button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="facilities.html">Facilities</a></li>
+                    <li><a href="about_us.html">About Us</a></li>
+                    <li>
+                        <a href="membership_plans.html">Membership Plans</a>
+                    </li>
+                    <li><a href="">Fitness Tips</a></li>
+                    <li><a href="">Class Schedule</a></li>
+                    <li><a href="">Contact Us</a></li>
+                    <li><a href="">Resources</a></li>
+                </ul>
+            </nav>
+        </aside>
 
+        <main id="template-main">
+            <div class="headers">
+                <h2>Welcome to the Facilities Tour of Ultimate Fitness</h2>
+                <br />
+                <p>
+                    The Ultimate Fitness state-of-the-art facility consists of
+                    <br />
+                    more than 20,000 square feet of health and fitness equipment
+                    <br />
+                    space. The facility features one free weight gym area,two
+                    <br />
+                    aerobics rooms, a cardio room, a sauna room and Jacuzzi
+                    <br />
+                    pool. We also have seperate men's and women's locker rooms
+                    <br />
+                    that contain lockers, changing rooms, and shower areas.
+                    <br />
+                </p>
+            </div>
+            <img src="images/Bonus Facility Images/More_free_weights.jpg" />
+            <div class="list">
+                <p>
+                    The Ultimate Fitness facility features the best in training,
+                    <br />
+                    fitness equipment, and accommodations including:
+                    <br />
+                    <br />
+                </p>
+                <ul>
+                    <li>Aerobics</li>
+                    <li>Circuit Training</li>
+                    <li>Elliptical Trainers</li>
+                    <li>Free Weights</li>
+                    <li>Group Cycling(Spinning)</li>
+                    <li>Kickboxing</li>
+                    <li>Men's and Women's Locker Rooms</li>
+                    <li>Multi-screen Video System</li>
+                    <li>Personal Training</li>
+                    <li>Pilates</li>
+                    <li>Plate-loaded Machines</li>
+                    <li>Snack/Juice Bar</li>
+                    <li>Stair Climbers</li>
+                    <li>Stationary Cycling</li>
+                    <li>Step Aerobics</li>
+                    <li>Treadmills</li>
+                    <li>Yoga</li>
+                </ul>
+            </div>
+            <img src="images/Bonus Facility Images/Juice_bar.jpg" />
+        </main>
+
+        <footer id="template-footer">
+            <address>
+                350 Park Avenue, New York 10019 &nbsp;&#9679;&nbsp; Phone:
+                <a href="tel:18887574856"> 1.888.757.4856 </a>
+                &nbsp;&#9679;&nbsp; Fax:
+                <a href="fax:18887574987"> 1.888.757.4987 </a>
+                &nbsp;&#9679;&nbsp; E-mail:
+                <a href="mailto:contact@uf-online.com">
+                    contact@uf-online.com
+                </a>
+            </address>
+        </footer>
+    </body>
 </html>
