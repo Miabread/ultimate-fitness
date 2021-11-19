@@ -4,7 +4,6 @@ main img {
 
 @media only screen and (min-width: 768px) {
     main {
-        padding: 10vw;
         display: grid;
         grid-template:
             "first aside" 1fr
