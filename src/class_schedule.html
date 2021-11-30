@@ -1,202 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="template.css" />
-        <link rel="stylesheet" href="class_schedule.css" />
-        <title>Ultimate Fitness: Schedule of Classes</title>
 
-        <script type="module">
-            const sidebar = document.querySelector("aside");
-            const openButton = document.querySelector("#open-sidebar");
-            const closeButton = document.querySelector("#close-sidebar");
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="template.css" />
+    <link rel="stylesheet" href="class_schedule.css" />
+    <title>Ultimate Fitness: Schedule of Classes</title>
 
-            openButton.addEventListener("click", () => {
-                sidebar.classList.add("slide-in");
-                sidebar.classList.remove("slide-out");
-            });
-            closeButton.addEventListener("click", () => {
+    <script type="module">
+        const sidebar = document.querySelector("aside");
+        const openButton = document.querySelector("#open-sidebar");
+        const closeButton = document.querySelector("#close-sidebar");
+
+        openButton.addEventListener("click", () => {
+            sidebar.classList.add("slide-in");
+            sidebar.classList.remove("slide-out");
+        });
+        closeButton.addEventListener("click", () => {
+            sidebar.classList.remove("slide-in");
+            sidebar.classList.add("slide-out");
+        });
+
+        document.addEventListener("click", (event) => {
+            const isSidebarClick = event.composedPath().includes(sidebar);
+            const isOpenButtonClick = event
+                .composedPath()
+                .includes(openButton);
+
+            if (!isSidebarClick && !isOpenButtonClick) {
                 sidebar.classList.remove("slide-in");
                 sidebar.classList.add("slide-out");
-            });
+            }
+        });
+    </script>
+</head>
 
-            document.addEventListener("click", (event) => {
-                const isSidebarClick = event.composedPath().includes(sidebar);
-                const isOpenButtonClick = event
-                    .composedPath()
-                    .includes(openButton);
+<body>
+    <header id="template-header">
+        <picture id="open-sidebar" alt="Ultimate Fitness">
+            <source media="(min-width: 768px)" srcset="../images/FITNESS_superBetterLonglong.png" />
+            <img src="../images/FITNESS_supperBetter.png" />
+        </picture>
+    </header>
 
-                if (!isSidebarClick && !isOpenButtonClick) {
-                    sidebar.classList.remove("slide-in");
-                    sidebar.classList.add("slide-out");
-                }
-            });
-        </script>
-    </head>
+    <aside id="template-sidebar">
+        <button id="close-sidebar"></button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li>
+                    <a href="membership_plans.html">Membership Plans</a>
+                </li>
+                <li><a href="fitness_tips.html">Fitness Tips</a></li>
+                <li><a href="class_schedule.html">Class Schedule</a></li>
+                <li><a href="">Contact Us</a></li>
+                <li><a href="">Resources</a></li>
+            </ul>
+        </nav>
+    </aside>
 
-    <body>
-        <header id="template-header">
-            <picture id="open-sidebar" alt="Ultimate Fitness">
-                <source
-                    media="(min-width: 768px)"
-                    srcset="../images/FITNESS_superBetterLonglong.png"
-                />
-                <img src="../images/FITNESS_supperBetter.png" />
-            </picture>
-        </header>
-
-        <aside id="template-sidebar">
-            <button id="close-sidebar"></button>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="facilities.html">Facilities</a></li>
-                    <li><a href="about_us.html">About Us</a></li>
-                    <li>
-                        <a href="membership_plans.html">Membership Plans</a>
-                    </li>
-                    <li><a href="fitness_tips.html">Fitness Tips</a></li>
-                    <li><a href="class_schedule.html">Class Schedule</a></li>
-                    <li><a href="">Contact Us</a></li>
-                    <li><a href="">Resources</a></li>
-                </ul>
-            </nav>
-        </aside>
-
-        <main id="template-main">
-            <h3>The Ultimate Fitness Class Schedule</h3>
+    <main id="template-main">
+        <h3>The Ultimate Fitness Class Schedule</h3>
+        <br />
+        <p>
+            Included on this page is our weekly aeriobic, cardio, and
+            personal training schedule.
             <br />
+            Our schedule is updated monthly, so please check this page often
+            for updates.
+        </p>
+        <br />
+
+        <div id="border-header">
+            <h2>
+                Ultimate Fitness Weekly Aerobic and Personal Traning
+                Schedule
+            </h2>
             <p>
-                Included on this page is our weekly aeriobic, cardio, and
-                personal training schedule.
-                <br />
-                Our schedule is updated monthly, so please check this page often
-                for updates.
+                Note: Please visit this page monthly as the schedule is
+                updated on the first day of each month
             </p>
+        </div>
+        <table>
+            <tr>
+                <th>Time</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+            </tr>
+            <tr>
+                <th>7:00-8:00a.m.</th>
+                <th>Low-Impact Aerobics</th>
+                <th>Total Yoga</th>
+                <th>Trekking</th>
+                <th>Low-Impact Aerobics</th>
+                <th>Total Yoga</th>
+                <th>X</th>
+                <th>X</th>
+            </tr>
+            <tr>
+                <th>8:00 - 9:00 a.m.</th>
+                <th>Trekking</th>
+                <th>Cardio Kickboxing</th>
+                <th>Aerobic Hiphop Dancing</th>
+                <th>Total Yoga</th>
+                <th>Cardio Kickboxing</th>
+                <th>Trekking</th>
+                <th>Low-Impact Aerobics</th>
+            </tr>
+            <tr>
+                <th>9:00 - 10:00 a.m.</th>
+                <th>Total Yoga</th>
+                <th>Spinning</th>
+                <th>Trekking</th>
+                <th>Aerobic Hiphop dancing</th>
+                <th>Spinning</th>
+                <th>Cardio Kickboxing</th>
+                <th>Trekking</th>
+            </tr>
+            <tr>
+                <th>10:00 - 11:00 a.m.</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th>4:00 - 5:00 p.m.</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th>5:00 - 6:00 p.m.</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th>6:00 - 7:00 p.m.</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+            <tr>
+                <th>7:00 - 8:00pm</th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </table>
+        <p class="small-text">
+            X = no class offered for the given time slot
             <br />
+            Personal training is avaliable during all time slots show above.
+        </p>
+    </main>
 
-            <div id="border-header">
-                <h2>
-                    Ultimate Fitness Weekly Aerobic and Personal Traning
-                    Schedule
-                </h2>
-                <p>
-                    Note: Please visit this page monthly as the schedule is
-                    updated on the first day of each month
-                </p>
-            </div>
-            <table>
-                <tr>
-                    <th>Time</th>
-                    <th>Monday</th>
-                    <th>Tuesday</th>
-                    <th>Wednesday</th>
-                    <th>Thursday</th>
-                    <th>Friday</th>
-                    <th>Saturday</th>
-                    <th>Sunday</th>
-                </tr>
-                <tr>
-                    <th>7:00-8:00a.m.</th>
-                    <th>Low-Impact Aerobics</th>
-                    <th>Total Yoga</th>
-                    <th>Trekking</th>
-                    <th>Low-Impact Aerobics</th>
-                    <th>Total Yoga</th>
-                    <th>X</th>
-                    <th>X</th>
-                </tr>
-                <tr>
-                    <th>8:00 - 9:00 a.m.</th>
-                    <th>Trekking</th>
-                    <th>Cardio Kickboxing</th>
-                    <th>Aerobic Hiphop Dancing</th>
-                    <th>Total Yoga</th>
-                    <th>Cardio Kickboxing</th>
-                    <th>Trekking</th>
-                    <th>Low-Impact Aerobics</th>
-                </tr>
-                <tr>
-                    <th>9:00 - 10:00 a.m.</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th>10:00 - 11:00 a.m.</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th>4:00 - 5:00 p.m.</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th>5:00 - 6:00 p.m.</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th>6:00 - 7:00 p.m.</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                <tr>
-                    <th>7:00 - 8:00pm</th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-            </table>
-            <p class="small-text">
-                X = no class offered for the given time slot
-                <br />
-                Personal training is avaliable during all time slots show above.
-            </p>
-        </main>
+    <footer id="template-footer">
+        <address>
+            350 Park Avenue, New York 10019 &nbsp;&#9679;&nbsp; Phone:
+            <a href="tel:18887574856"> 1.888.757.4856 </a>
+            &nbsp;&#9679;&nbsp; Fax:
+            <a href="fax:18887574987"> 1.888.757.4987 </a>
+            &nbsp;&#9679;&nbsp; E-mail:
+            <a href="mailto:contact@uf-online.com">
+                contact@uf-online.com
+            </a>
+        </address>
+    </footer>
+</body>
 
-        <footer id="template-footer">
-            <address>
-                350 Park Avenue, New York 10019 &nbsp;&#9679;&nbsp; Phone:
-                <a href="tel:18887574856"> 1.888.757.4856 </a>
-                &nbsp;&#9679;&nbsp; Fax:
-                <a href="fax:18887574987"> 1.888.757.4987 </a>
-                &nbsp;&#9679;&nbsp; E-mail:
-                <a href="mailto:contact@uf-online.com">
-                    contact@uf-online.com
-                </a>
-            </address>
-        </footer>
-    </body>
 </html>
