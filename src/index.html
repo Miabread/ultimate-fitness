@@ -1,160 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="template.css" />
-        <title>Ultimate Fitness: The Ultimate Health and Fitness Center</title>
-        <link rel="stylesheet" href="index.css" />
 
-        <script type="module">
-            const sidebar = document.querySelector("aside");
-            const openButton = document.querySelector("#open-sidebar");
-            const closeButton = document.querySelector("#close-sidebar");
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="template.css" />
+    <title>Ultimate Fitness: The Ultimate Health and Fitness Center</title>
+    <link rel="stylesheet" href="index.css" />
 
-            openButton.addEventListener("click", () => {
-                sidebar.classList.add("slide-in");
-                sidebar.classList.remove("slide-out");
-            });
-            closeButton.addEventListener("click", () => {
+    <script type="module">
+        const sidebar = document.querySelector("aside");
+        const openButton = document.querySelector("#open-sidebar");
+        const closeButton = document.querySelector("#close-sidebar");
+
+        openButton.addEventListener("click", () => {
+            sidebar.classList.add("slide-in");
+            sidebar.classList.remove("slide-out");
+        });
+        closeButton.addEventListener("click", () => {
+            sidebar.classList.remove("slide-in");
+            sidebar.classList.add("slide-out");
+        });
+
+        document.addEventListener("click", (event) => {
+            const isSidebarClick = event.composedPath().includes(sidebar);
+            const isOpenButtonClick = event
+                .composedPath()
+                .includes(openButton);
+
+            if (!isSidebarClick && !isOpenButtonClick) {
                 sidebar.classList.remove("slide-in");
                 sidebar.classList.add("slide-out");
-            });
+            }
+        });
+    </script>
+</head>
 
-            document.addEventListener("click", (event) => {
-                const isSidebarClick = event.composedPath().includes(sidebar);
-                const isOpenButtonClick = event
-                    .composedPath()
-                    .includes(openButton);
+<body>
+    <header id="template-header">
+        <picture id="open-sidebar" alt="Ultimate Fitness">
+            <source media="(min-width: 768px)" srcset="../images/FITNESS_superBetterLonglong.png" />
+            <img src="../images/FITNESS_supperBetter.png" />
+        </picture>
+    </header>
 
-                if (!isSidebarClick && !isOpenButtonClick) {
-                    sidebar.classList.remove("slide-in");
-                    sidebar.classList.add("slide-out");
-                }
-            });
-        </script>
-    </head>
+    <aside id="template-sidebar">
+        <button id="close-sidebar"></button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="facilities.html">Facilities</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li>
+                    <a href="membership_plans.html">Membership Plans</a>
+                </li>
+                <li><a href="fitness_tips.html">Fitness Tips</a></li>
+                <li><a href="">Class Schedule</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="">Resources</a></li>
+            </ul>
+        </nav>
+    </aside>
 
-    <body>
-        <header id="template-header">
-            <picture id="open-sidebar" alt="Ultimate Fitness">
-                <source
-                    media="(min-width: 768px)"
-                    srcset="../images/FITNESS_superBetterLonglong.png"
-                />
-                <img src="../images/FITNESS_supperBetter.png" />
-            </picture>
-        </header>
-
-        <aside id="template-sidebar">
-            <button id="close-sidebar"></button>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="facilities.html">Facilities</a></li>
-                    <li><a href="about_us.html">About Us</a></li>
-                    <li>
-                        <a href="membership_plans.html">Membership Plans</a>
-                    </li>
-                    <li><a href="fitness_tips.html">Fitness Tips</a></li>
-                    <li><a href="">Class Schedule</a></li>
-                    <li><a href="">Contact Us</a></li>
-                    <li><a href="">Resources</a></li>
-                </ul>
-            </nav>
+    <main id="template-main">
+        <div class="first">
+            <h3>Welcome to Ultimate Fitness:</h3>
+            <h3>The Ultimate Health and Fitness Center</h3>
+            <br />
+            <p>
+                Since 1998, Ultimate Fitness has provided the amenities of a
+                large
+                <br />
+                health club chain, with the service and personality of a
+                hometown gym. Please
+                <br />
+                browse our site to find out about our top-rated facility.
+            </p>
+            <br />
+            Come check us out using our free one-week trial pass located on
+            the
+            <br />
+            <a href="membership_plans.html">Membership Plans</a> page.
+            <p>
+                Ultimate Fitness is a proud member of The International
+                Health,Racquet
+                <br />
+                & Sports Club Association ((HRSA). IHRSA is a non-profit
+                trade association <br />
+                representing health & fitness facilities, gyms,spas, sports
+                clubs, and suppliers <br />
+                worldwide. The Mission of IHRSA is to grow, protect, and
+                promote the
+                <br />
+                industry, and to provide its members with benefits that will
+                help them be <br />
+                more successful.
+            </p>
+            <br />
+            <p>
+                We have membership plans to meet any budget. For example, if
+                working
+                <br />
+                out and training on the weekend doesn't fit your schedule,
+                Ultimate
+                <br />
+                Fitness is proud to be one of the few fitness facilities
+                offering weekday-only <br />
+                memberships.
+            </p>
+            <br />
+        </div>
+        <aside>
+            <img src="../images/Image21.jpg" /> <br />
+            <a href="membership_plans.html">
+                <img src="../images/VIP_PASS_onemonth50off.png" />
+                <img src="../images/VIP_PASS_oneweekfree.png" />
+            </a>
         </aside>
-
-        <main id="template-main">
-            <div class="first">
-                <h3>Welcome to Ultimate Fitness:</h3>
-                <h3>The Ultimate Health and Fitness Center</h3>
+        <div class="second">
+            <h3>Our Class Schedule is Now Online!</h3>
+            <br />
+            <p>
+                In addition to our state-of-the-art weight training facility
                 <br />
-                <p>
-                    Since 1998, Ultimate Fitness has provided the amenities of a
-                    large
-                    <br />
-                    health club chain, with the service and personality of a
-                    hometown gym. Please
-                    <br />
-                    browse our site to find out about our top-rated facility.
-                </p>
+                room,Ultimate Fitness offers a variety of aerobic, cardio,
                 <br />
-                Come check us out using our free one-week trial pass located on
-                the
+                and personal training classes.
                 <br />
-                <a href="membership_plans.html">Membership Plans</a> page.
-                <p>
-                    Ultimate Fitness is a proud member of The International
-                    Health,Racquet
-                    <br />
-                    & Sports Club Association ((HRSA). IHRSA is a non-profit
-                    trade association <br />
-                    representing health & fitness facilities, gyms,spas, sports
-                    clubs, and suppliers <br />
-                    worldwide. The Mission of IHRSA is to grow, protect, and
-                    promote the
-                    <br />
-                    industry, and to provide its members with benefits that will
-                    help them be <br />
-                    more successful.
-                </p>
                 <br />
-                <p>
-                    We have membership plans to meet any budget. For example, if
-                    working
-                    <br />
-                    out and training on the weekend doesn't fit your schedule,
-                    Ultimate
-                    <br />
-                    Fitness is proud to be one of the few fitness facilities
-                    offering weekday-only <br />
-                    memberships.
-                </p>
+                This page is updated monthly.As a member, you can always
+                check the class
                 <br />
-            </div>
-            <aside>
-                <img src="../images/Image21.jpg" /> <br />
-                <a href="membership_plans.html">
-                    <img src="../images/VIP_PASS_onemonth50off.png" />
-                    <img src="../images/VIP_PASS_oneweekfree.png" />
+                schedule online by visiting our Web site.
+                <br />
+                <br />
+                <a href="">
+                    Click here to visit our fitness class schedule online.
                 </a>
-            </aside>
-            <div class="second">
-                <h3>Our Class Schedule is Now Online!</h3>
-                <br />
-                <p>
-                    In addition to our state-of-the-art weight training facility
-                    <br />
-                    room,Ultimate Fitness offers a variety of aerobic, cardio,
-                    <br />
-                    and personal training classes.
-                    <br />
-                    <br />
-                    This page is updated monthly.As a member, you can always
-                    check the class
-                    <br />
-                    schedule online by visiting our Web site.
-                    <br />
-                    <br />
-                    <a href="">
-                        Click here to visit our fitness class schedule online.
-                    </a>
-                </p>
-            </div>
-        </main>
+            </p>
+        </div>
+    </main>
 
-        <footer id="template-footer">
-            <address>
-                350 Park Avenue, New York 10019 &nbsp;&#9679;&nbsp; Phone:
-                <a href="tel:18887574856"> 1.888.757.4856 </a>
-                &nbsp;&#9679;&nbsp; Fax:
-                <a href="fax:18887574987"> 1.888.757.4987 </a>
-                &nbsp;&#9679;&nbsp; E-mail:
-                <a href="mailto:contact@uf-online.com">
-                    contact@uf-online.com
-                </a>
-            </address>
-        </footer>
-    </body>
+    <footer id="template-footer">
+        <address>
+            350 Park Avenue, New York 10019 &nbsp;&#9679;&nbsp; Phone:
+            <a href="tel:18887574856"> 1.888.757.4856 </a>
+            &nbsp;&#9679;&nbsp; Fax:
+            <a href="fax:18887574987"> 1.888.757.4987 </a>
+            &nbsp;&#9679;&nbsp; E-mail:
+            <a href="mailto:contact@uf-online.com">
+                contact@uf-online.com
+            </a>
+        </address>
+    </footer>
+</body>
+
 </html>
