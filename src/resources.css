@@ -1,0 +1,29 @@
+main img {
+  width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+  main img {
+    width: 27vw;
+  }
+}
+
+#border-header {
+  border-width: 5px;
+  border: black solid;
+  width: 61vw;
+  text-align: center;
+}
+
+table,
+th,
+td {
+  border-collapse: collapse;
+  border: 3px solid;
+  width: 61.32vw;
+  padding: 3px;
+  text-align: left;
+}
+.small-text {
+  font-size: 15px;
+}
